@@ -46,8 +46,8 @@ if [ "$ENABLE_TSVC" -eq 1 ]; then
   echo "Running TSVC tests..."
   cd TSVC_2
   make clean && rm -rf ./bin/
-  make -j COMPILER="$CC1TY" CC="$CC1" TESTS="s111"
-  make -j COMPILER="$CC2TY" CC="$CC2" TESTS="s111"
+  make -j COMPILER="$CC1TY" CC="$CC1"
+  make -j COMPILER="$CC2TY" CC="$CC2"
 
   echo "Running tests with $CC1..."
   $STDBUF ./bin/${CC1TY}/tsvc_vec_default 2>&1 | tee ../$CC1OUT/tsvc_output.log

@@ -2,9 +2,17 @@
 
 set -e
 
+PWD=$(pwd)
+
 rm -rf results/
 
-cd TSVC_2
+cd ${PWD}/TSVC_2
 make clean && rm -rf ./bin/
 
-echo "Cleaned all previous results."
+cd ${PWD}/STREAM
+make clean
+
+cd ${PWD}/Dhrystone
+make clean
+
+echo "Cleaned all results."
