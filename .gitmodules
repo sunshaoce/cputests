@@ -1,3 +1,6 @@
 [submodule "TSVC_2"]
 	path = TSVC_2
 	url = https://github.com/tenstorrent/TSVC_2.git
+[submodule "STREAM"]
+	path = STREAM
+	url = https://github.com/jeffhammond/STREAM.git
