@@ -17,7 +17,14 @@ Then results will be in the `results` directory.
 
 ### Missing `libomp.so`
 
-Find the path to `libomp.so` in your compiler installation, and set the `CC1FLAGS` or `CC2FLAGS` for example:
+If you see errors about missing `libomp.so`, install OpenMP library for your compiler.
+
+```shell
+# For Ubuntu with clang
+sudo apt install libomp-dev
+```
+
+Or you can find the path to `libomp.so` in your compiler installation, and set the `CC1FLAGS` or `CC2FLAGS` for example:
 
 ```shell
 CC1FLAGS="-L <PATH_TO_LIBOMP>" ./run-tests.sh
