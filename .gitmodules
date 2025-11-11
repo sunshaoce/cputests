@@ -4,3 +4,6 @@
 [submodule "STREAM"]
 	path = STREAM
 	url = https://github.com/jeffhammond/STREAM.git
+[submodule "dhrystone"]
+	path = dhrystone
+	url = https://github.com/sunshaoce/dhrystone.git
