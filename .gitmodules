@@ -7,3 +7,6 @@
 [submodule "dhrystone"]
 	path = dhrystone
 	url = https://github.com/sunshaoce/dhrystone.git
+[submodule "coremark"]
+	path = coremark
+	url = https://github.com/sunshaoce/coremark.git
