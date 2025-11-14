@@ -10,3 +10,6 @@
 [submodule "coremark"]
 	path = coremark
 	url = https://github.com/sunshaoce/coremark.git
+[submodule "linpackc"]
+	path = linpackc
+	url = https://github.com/sunshaoce/linpackc.git
