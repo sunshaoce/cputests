@@ -10,6 +10,7 @@ ENABLE_STREAM=${ENABLE_STREAM:=0}
 ENABLE_DHRYSTONE=${ENABLE_DHRYSTONE:=0}
 ENABLE_COREMARK=${ENABLE_COREMARK:=0}
 ENABLE_LINPACK=${ENABLE_LINPACK:=0}
+ENABLE_WHETSTONE=${ENABLE_WHETSTONE:=0}
 
 if [ "$SKIP_ALL" -eq 0 ]; then
   ENABLE_TSVC=1
@@ -123,6 +124,20 @@ if [ "$ENABLE_LINPACK" -eq 1 ]; then
   make clean
   make CC="$CC2" -j
   $STDBUF ./linpackc 2>&1 | tee $CC2OUT/linpack_output.log
+  make clean
+fi
+
+if [ "$ENABLE_WHETSTONE" -eq 1 ]; then
+  green "Running Whetstone tests..."
+  cd ${ROOT_DIR}/whetstone
+  green "Running Whetstone tests with $CC1..."
+  make clean
+  make CC="$CC1" -j
+  $STDBUF ./whetdc 300000 2>&1 | tee $CC1OUT/whetstone_output.log
+  green "Running Whetstone tests with $CC2..."
+  make clean
+  make CC="$CC2" -j
+  $STDBUF ./whetdc 300000 2>&1 | tee $CC2OUT/whetstone_output.log
   make clean
 fi
 
