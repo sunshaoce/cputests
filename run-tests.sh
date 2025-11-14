@@ -61,8 +61,8 @@ if [ "$ENABLE_TSVC" -eq 1 ]; then
   green "Running TSVC tests..."
   cd ${ROOT_DIR}/TSVC_2
   make clean && rm -rf ./bin/
-  make -j COMPILER="$CC1TY" CC="$CC1" TESTS="s111"
-  make -j COMPILER="$CC2TY" CC="$CC2" TESTS="s111"
+  make -j COMPILER="$CC1TY" CC="$CC1" # TESTS="s111"
+  make -j COMPILER="$CC2TY" CC="$CC2" # TESTS="s111"
 
   green "Running TSVC tests with $CC1..."
   $STDBUF ./bin/${CC1TY}/tsvc_vec_default 2>&1 | tee $CC1OUT/tsvc_output.log

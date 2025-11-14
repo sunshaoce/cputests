@@ -13,3 +13,6 @@
 [submodule "linpackc"]
 	path = linpackc
 	url = https://github.com/sunshaoce/linpackc.git
+[submodule "whetstone"]
+	path = whetstone
+	url = https://github.com/sunshaoce/whetstone.git
