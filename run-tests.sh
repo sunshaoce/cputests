@@ -17,6 +17,8 @@ if [ "$SKIP_ALL" -eq 0 ]; then
   ENABLE_STREAM=1
   ENABLE_DHRYSTONE=1
   ENABLE_COREMARK=1
+  ENABLE_LINPACK=1
+  ENABLE_WHETSTONE=1
 fi
 
 green() { echo -e "\033[1;32m$*\033[0m"; }
